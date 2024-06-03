@@ -1,7 +1,6 @@
- <!-- le fichier "Connect.php" permettant de se connecter à la BDD (grâce à PDO) -->
- <?php
-
- namespace Model;       // le namespace de la classe Connect --> "Model",
+<?php
+namespace Model;       // le namespace de la classe Connect --> "Model",
+//le fichier "Connect.php" permettant de se connecter à la BDD (grâce à PDO) -->
  
 //  La classe est abstraite car on n'instanciera jamais la classe Connect puisqu'on aura 
 //          seulement besoin d'accéder à la méthode "seConnecter"

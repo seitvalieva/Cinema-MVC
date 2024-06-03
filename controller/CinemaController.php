@@ -1,12 +1,11 @@
-<!-- contiendra l'ensemble des requêtes 
-    dans les fonctions en relation avec les vues -->
+<?php
 
-    <?php
+namespace Controller;
+// contiendra l'ensemble des requêtes 
+    // dans les fonctions en relation avec les vues -->
 
     // l'utilisation du "use" pour accéder à la classe Connect 
         // située dans le namespace "Model"
-
-    namespace Controller;
     use Model\Connect;   
 
     class CinemaController {

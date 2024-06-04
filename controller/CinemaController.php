@@ -16,7 +16,7 @@ namespace Controller;
             $pdo = Connect::seConnecter();      // On se connecte
             // On exécute la requête de notre choix
             $requete = $pdo->query("                
-                SELECT title, yearRelease 
+                SELECT titleFilm, yearRelease 
                 FROM film
                 ");
 
@@ -27,7 +27,7 @@ namespace Controller;
 
             $pdo = Connect::seConnecter();
             $requete = $pdo->query("
-                SELECT nameActor, surnameActor, bdayActor
+                SELECT nameActor, surnameActor, genderActor, bdayAtor
                 FROM actor
             ");
             require "view/listActors.php";
@@ -44,7 +44,8 @@ namespace Controller;
             WHERE idFilm = :id
             ");
 
-            requeteFilm->execute(["id" => $id]);
+            $requeteFilm->execute(["id" => $id]);
+            require "view/detailFilm.php";
 
     }
 }

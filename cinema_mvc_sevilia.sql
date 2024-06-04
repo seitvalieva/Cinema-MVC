@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `actor` (
   `nameActor` varchar(50) NOT NULL DEFAULT '0',
   `surnameActor` varchar(50) NOT NULL DEFAULT '0',
   `genderActor` varchar(10) NOT NULL DEFAULT '0',
-  `bdayAtor` date NOT NULL,
+  `bdayActor` date NOT NULL,
   PRIMARY KEY (`idActor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 

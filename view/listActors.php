@@ -7,6 +7,7 @@
         <tr>
             <th>NAME</th>
             <th>SURNAME</th>
+            <th>GENDER</th>
             <th>BIRTHDAY</th>
         </tr>
     </thead>
@@ -14,9 +15,10 @@
         <?php
             foreach($requete->fetchAll() as $actor) { ?>
             <tr>
-                <td><?= $film["nameActor"] ?></td>
-                <td><?= $film["surnameActor"] ?></td>
-                <td><?= $film["bdayActor"] ?></td>
+                <td><?= $actor["nameActor"] ?></td>
+                <td><?= $actor["surnameActor"] ?></td>
+                <td><?= $actor["genderActor"] ?></td>
+                <td><?= $actor["bdayAtor"] ?></td>
             </tr>
 
            <?php } ?>

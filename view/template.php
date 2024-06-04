@@ -14,8 +14,9 @@ On exploitera ce qu'on appelle "la temporisation de sortie" en PHP  -->
     <title><?= $titre ?></title>
 </head>
 <body>
+    <header></header>
+    
     <main>
-        
         <div id="container">
             <h1>PDO Cinema</h1>
             <h2><?= $titre_secondaire ?></h2>
@@ -25,6 +26,6 @@ On exploitera ce qu'on appelle "la temporisation de sortie" en PHP  -->
 
 
     
-    <script src ="./public/js/script.js"></script>      
+    <script src ="./public/js/main.js"></script>      
 </body>
 </html>

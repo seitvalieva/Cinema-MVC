@@ -22,6 +22,7 @@ if(isset($_GET["action"])) {
     switch($_GET["action"]) {
 
         case "listFilms": $ctrlCinema->listFilms(); break;
+        
         case "listActors": $ctrlCinema->listActors(); break;
 
         case "detailFilm": $ctrlCinema->detailFilm($id); break;

@@ -26,10 +26,6 @@ foreach($requeteFilm->fetchAll() as $film) {
         </tr>
     </thead>
     <tbody>
-        <!-- <?php
-            foreach($requeteFilm->fetchAll() as $film) { ?>
-    
-           <?php } ?> -->
         <tr>
             <td><?= $film["idFilm"] ?></td>
             <td><?= $film["titleFilm"] ?></td>

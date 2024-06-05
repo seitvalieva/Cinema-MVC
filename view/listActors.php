@@ -18,7 +18,7 @@
                 <td><?= $actor["nameActor"] ?></td>
                 <td><?= $actor["surnameActor"] ?></td>
                 <td><?= $actor["genderActor"] ?></td>
-                <td><?= $actor["bdayAtor"] ?></td>
+                <td><?= $actor["bdayActor"] ?></td>
             </tr>
 
            <?php } ?>

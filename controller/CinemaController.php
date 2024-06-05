@@ -57,4 +57,15 @@ namespace Controller;
             ");
             require "view/listDirectors.php";
     }
+
+    public function listGenres() {
+        $pdo = Connect::seConnecter();
+
+        $requete = $pdo->query("
+            SELECT idGenre, nameGenre
+            FROM genre
+            ");
+        
+            require "view/listGenres.php";
+    }
 }

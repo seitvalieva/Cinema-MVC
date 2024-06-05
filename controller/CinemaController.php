@@ -68,4 +68,14 @@ namespace Controller;
         
             require "view/listGenres.php";
     }
+    public function listRoles() {
+        $pdo = Connect::seConnecter();
+
+        $requete = $pdo->query("
+            SELECT idRole, nameRole
+            FROM role
+            ");
+        
+            require "view/listRoles.php";
+    }
 }

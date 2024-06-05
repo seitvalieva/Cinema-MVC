@@ -48,4 +48,13 @@ namespace Controller;
             require "view/detailFilm.php";
 
     }
+    public function listDirectors() {
+        $pdo = Connect::seConnecter();
+
+        $requete = $pdo->query("
+                SELECT nameDirector, surnameDirector
+                FROM director
+            ");
+            require "view/listDirectors.php";
+    }
 }

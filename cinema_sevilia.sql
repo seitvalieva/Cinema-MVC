@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `actor` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Listage des données de la table cinema_sevilia.actor : ~0 rows (environ)
-INSERT INTO `actor` (`idActor`, `nameActor`, `surnameActor`, `genderActor`, `bdayAtor`) VALUES
+INSERT INTO `actor` (`idActor`, `nameActor`, `surnameActor`, `genderActor`, `bdayActor`) VALUES
 	(1, 'Uma', 'Thurman', 'f', '1970-04-29'),
 	(2, 'David', 'Carradine', 'm', '1936-12-08'),
 	(3, 'Lucy ', 'Liu', 'f', '1968-12-02'),

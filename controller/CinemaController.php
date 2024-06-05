@@ -27,7 +27,7 @@ namespace Controller;
 
             $pdo = Connect::seConnecter();
             $requete = $pdo->query("
-                SELECT nameActor, surnameActor, genderActor, bdayAtor
+                SELECT nameActor, surnameActor, genderActor, bdayActor
                 FROM actor
             ");
             require "view/listActors.php";

@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `actor` (
   PRIMARY KEY (`idActor`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Listage des données de la table cinema_sevilia.actor : ~0 rows (environ)
+-- Listage des données de la table cinema_sevilia.actor : ~10 rows (environ)
 INSERT INTO `actor` (`idActor`, `nameActor`, `surnameActor`, `genderActor`, `bdayActor`) VALUES
 	(1, 'Uma', 'Thurman', 'f', '1970-04-29'),
 	(2, 'David', 'Carradine', 'm', '1936-12-08'),
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `casting` (
   CONSTRAINT `FK_casting_role` FOREIGN KEY (`idRole`) REFERENCES `role` (`idRole`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Listage des données de la table cinema_sevilia.casting : ~0 rows (environ)
+-- Listage des données de la table cinema_sevilia.casting : ~13 rows (environ)
 INSERT INTO `casting` (`idFilm`, `idActor`, `idRole`) VALUES
 	(3, 1, 1),
 	(3, 2, 3),
@@ -79,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `director` (
   PRIMARY KEY (`idDirector`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Listage des données de la table cinema_sevilia.director : ~0 rows (environ)
+-- Listage des données de la table cinema_sevilia.director : ~3 rows (environ)
 INSERT INTO `director` (`idDirector`, `nameDirector`, `surnameDirector`) VALUES
 	(1, 'Quentin', 'Tarantino'),
 	(2, 'Jackie', 'Chan'),
@@ -100,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `film` (
   CONSTRAINT `FK__director` FOREIGN KEY (`idDirector`) REFERENCES `director` (`idDirector`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Listage des données de la table cinema_sevilia.film : ~0 rows (environ)
+-- Listage des données de la table cinema_sevilia.film : ~5 rows (environ)
 INSERT INTO `film` (`idFilm`, `titleFilm`, `yearRelease`, `durationMins`, `synopsisFilm`, `posterFilm`, `ratingFilm`, `idDirector`) VALUES
 	(3, 'Kill Bill 1', 2003, 111, NULL, NULL, 4, 1),
 	(5, 'Kill Bill 2', 2004, 137, 'Après s\'être débarrassée de ses anciennes collègues Vernita Green et O-Ren Ishii, la Mariée poursuit sa quête vengeresse. Il lui reste à régler le sort de Budd puis de Elle Driver avant d\'atteindre le but ultime : tuer Bill.', NULL, 4, 1),
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `films_genres` (
   CONSTRAINT `FK_films_genres_film` FOREIGN KEY (`idFilm`) REFERENCES `film` (`idFilm`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- Listage des données de la table cinema_sevilia.films_genres : ~0 rows (environ)
+-- Listage des données de la table cinema_sevilia.films_genres : ~10 rows (environ)
 INSERT INTO `films_genres` (`idGenre`, `idFilm`) VALUES
 	(1, 3),
 	(2, 3),

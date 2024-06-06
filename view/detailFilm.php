@@ -1,4 +1,7 @@
 <?php ob_start(); 
+
+$castings = $requeteCasting->fetchAll();
+
 foreach($requeteFilm->fetchAll() as $film) { 
     $idFilm = $film["idFilm"];
     $titleFilm = $film["titleFilm"];
@@ -37,6 +40,14 @@ foreach($requeteFilm->fetchAll() as $film) {
         </tr>
     </tbody>
 </table>
+
+<h2>Casting du film</h2>
+<?php
+    foreach($castings as $cast) {
+        echo $cast["nameActor"]." ".$cast["surnameActor"]." as ".$cast["nameRole"]."<br>";
+    }
+?>
+
 <?php 
     $titre = "Detail de film";
     $titre_secondaire = "Detail de film";

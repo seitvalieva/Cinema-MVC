@@ -14,6 +14,7 @@
             foreach($requete->fetchAll() as $role) { ?>
             <tr>
                 <td><?= $role["idRole"] ?></td>
+                <td><a href="index.php?action=detailFilm&id="></a></td>
                 <td><?= $role["nameRole"] ?></td>
             </tr>
 

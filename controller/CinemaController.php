@@ -44,7 +44,17 @@ namespace Controller;
             WHERE idFilm = :id
             ");
 
+            $requeteCasting = $pdo->prepare(
+                "SELECT nameActor, surnameActor, nameRole
+                FROM casting
+                INNER JOIN role ON casting.idRole = role.idRole
+                INNER JOIN actor ON casting.idActor = actor.idActor
+                WHERE casting.idFilm = :id"
+            );
+
             $requeteFilm->execute(["id" => $id]);
+            $requeteCasting->execute(["id" => $id]);
+            
             require "view/detailFilm.php";
 
     }

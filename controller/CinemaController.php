@@ -136,13 +136,13 @@ namespace Controller;
         $pdo = Connect::seConnecter();
 
         $requeteGenre = $pdo->prepare("
-        SELECT idGenre, nameGenre
+        SELECT *
         FROM genre
         WHERE idGenre = :id
         ");
 
         $requeteFilmsGenre = $pdo->prepare("
-        SELECT idGenre, nameGenre, titleFilm
+        SELECT nameGenre, titleFilm
         FROM films_genres
         INNER JOIN genre ON films_genres.idGenre = genre.idGenre
         INNER JOIN film ON films_genres.idFilm = film.idFilm

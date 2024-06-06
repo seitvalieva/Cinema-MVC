@@ -86,6 +86,11 @@ namespace Controller;
             FROM role
             ");
         
+        $requeteFilm = $pdo->query("
+            SELECT titleFilm
+            FROM film
+        ");
+        
             require "view/listRoles.php";
     }
     public function detailActor($id) {

@@ -6,7 +6,8 @@
     <thead>
         <tr>
             <th>ID</th>
-            <TH>PERSONNAGE</TH>
+            <th>PERSONNAGE</th>
+            <th>FILM</th>
         </tr>
     </thead>
     <tbody>
@@ -14,8 +15,10 @@
             foreach($requete->fetchAll() as $role) { ?>
             <tr>
                 <td><?= $role["idRole"] ?></td>
-                <td><a href="index.php?action=detailFilm&id="></a></td>
-                <td><?= $role["nameRole"] ?></td>
+                
+                <td><a href=""><?= $role["nameRole"] ?></a></td>
+            
+                <!-- <td><a href=""><?= $film["titleFilm"] ?></a></td> -->
             </tr>
 
            <?php } ?>
@@ -25,12 +28,7 @@
     $titre = "list of roles";
     $titre_secondaire = "List of roles";
 
-    // On va donc "aspirer" tout ce qui se trouve entre 2 fonctions "ob_start()" et "ob_get_clean()" 
-                // (temporisation de sortie) 
-        // pour stocker le contenu dans une variable $contenu
     $contenu = ob_get_clean();
-
-    // Le require de fin permet d'injecter le contenu dans le template "squelette" > template.php
 
     require "view/template.php";
 ?>

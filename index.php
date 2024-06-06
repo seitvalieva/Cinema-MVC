@@ -33,6 +33,8 @@ if(isset($_GET["action"])) {
 
         case "listRoles": $ctrlCinema->listRoles(); break;
 
+        
+
     }
 }
 

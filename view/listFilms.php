@@ -5,6 +5,7 @@
 <table class="uk-table uk-table-striped">
     <thead>
         <tr>
+            <th>ID</th>
             <th>TITLE</th>
             <TH>RELEASE YEAR</TH>
         </tr>
@@ -13,7 +14,10 @@
         <?php
             foreach($requete->fetchAll() as $film) { ?>
             <tr>
-                <td><?= $film["titleFilm"] ?></td>
+                <td><?= $film["idFilm"] ?></td>
+
+                <td><a href="index.php?action=detailFilm&id=<?= $film['idFilm']?>"><?= $film["titleFilm"] ?></a></td>
+
                 <td><?= $film["yearRelease"] ?></td>
             </tr>
 

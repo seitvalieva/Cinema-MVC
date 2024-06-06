@@ -16,7 +16,7 @@ namespace Controller;
             $pdo = Connect::seConnecter();      // On se connecte
             // On exécute la requête de notre choix
             $requete = $pdo->query("                
-                SELECT titleFilm, yearRelease 
+                SELECT idFilm, titleFilm, yearRelease 
                 FROM film
                 ");
 

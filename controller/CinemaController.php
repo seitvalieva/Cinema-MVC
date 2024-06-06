@@ -131,5 +131,29 @@ namespace Controller;
         $requeteFilmographie->execute(["id" => $id]);
         require "view/detailDirector.php";
     }
+    public function detailGenre($id) {
+
+        $pdo = Connect::seConnecter();
+
+        $requeteGenre = $pdo->prepare("
+        SELECT idGenre, nameGenre
+        FROM genre
+        WHERE idGenre = :id
+        ");
+
+        $requeteFilmsGenre = $pdo->prepare("
+        SELECT idGenre, nameGenre, titleFilm
+        FROM films_genres
+        INNER JOIN genre ON films_genres.idGenre = genre.idGenre
+        INNER JOIN film ON films_genres.idFilm = film.idFilm
+        WHERE genre.idGenre = :id
+        ");
+
+        $requeteGenre->execute(["id" => $id]);
+        $requeteFilmsGenre->execute(["id" => $id]);
+        
+        require "view/detailGenre.php";
+
+    }
 
 }

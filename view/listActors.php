@@ -5,20 +5,20 @@
 <table class="uk-table uk-table-striped">
     <thead>
         <tr>
+            <th>ID</th>
             <th>NAME</th>
             <th>SURNAME</th>
-            <th>GENDER</th>
-            <th>BIRTHDAY</th>
+            
         </tr>
     </thead>
     <tbody>
         <?php
             foreach($requete->fetchAll() as $actor) { ?>
             <tr>
+                <td><?= $actor["idActor"] ?></td>
                 <td><?= $actor["nameActor"] ?></td>
                 <td><?= $actor["surnameActor"] ?></td>
-                <td><?= $actor["genderActor"] ?></td>
-                <td><?= $actor["bdayActor"] ?></td>
+                
             </tr>
 
            <?php } ?>

@@ -16,8 +16,8 @@
         <?php
             foreach($requete->fetchAll() as $director) { ?>
             <tr>
-                <td><a href=""><?= $director["nameDirector"] ?></a></td>
-                <td><a href=""><?= $director["surnameDirector"] ?></a></td>
+                <td><a href="index.php?action=detailDirector&id=<?= $director["idDirector"] ?>"><?= $director["nameDirector"] ?></a></td>
+                <td><a href="index.php?action=detailDirector&id=<?= $director["idDirector"] ?>"><?= $director["surnameDirector"] ?></a></td>
             </tr>
 
            <?php } ?>

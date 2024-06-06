@@ -35,7 +35,7 @@ foreach($requeteDirector->fetchAll() as $director){
 <h2>Filmographie of the director</h2>
 <?php
     foreach($films as $film) {
-        echo $film["nameDirector"]." ".$film["surnameDirector"]." .".$film["titleFilm"]."<br>";
+        echo $film["nameDirector"]." ".$film["surnameDirector"]." ".$film["titleFilm"]."<br>";
     }
 ?>
 

@@ -62,7 +62,7 @@ namespace Controller;
         $pdo = Connect::seConnecter();
 
         $requete = $pdo->query("
-                SELECT nameDirector, surnameDirector
+                SELECT idDirector, nameDirector, surnameDirector
                 FROM director
             ");
             require "view/listDirectors.php";

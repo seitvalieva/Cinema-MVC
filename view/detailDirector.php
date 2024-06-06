@@ -1,5 +1,7 @@
 <?php ob_start(); 
 
+$films = $requeteFilmographie->fetchAll();
+
 foreach($requeteDirector->fetchAll() as $director){
     $idDirector = $director["idDirector"];
     $nameDirector = $director["nameDirector"];
@@ -29,6 +31,13 @@ foreach($requeteDirector->fetchAll() as $director){
         </tr>
     </tbody>
 </table>
+
+<h2>Filmographie of the director</h2>
+<?php
+    foreach($films as $film) {
+        echo $film["nameDirector"]." ".$film["surnameDirector"]." .".$film["titleFilm"]."<br>";
+    }
+?>
 
 <?php 
     $titre = "Details of a director";

@@ -120,7 +120,15 @@ namespace Controller;
         WHERE idDirector = :id
         ");
 
+        $requeteFilmographie = $pdo->prepare("
+        SELECT nameDirector, surnameDirector, titleFilm
+        FROM director 
+        INNER JOIN film ON director.idDirector = film.idDirector
+        WHERE director.idDirector = :id
+        ");
+
         $requeteDirector->execute(["id" => $id]);
+        $requeteFilmographie->execute(["id" => $id]);
         require "view/detailDirector.php";
     }
 

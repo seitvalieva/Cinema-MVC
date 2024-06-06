@@ -44,8 +44,8 @@ namespace Controller;
             WHERE idFilm = :id
             ");
 
-            $requeteCasting = $pdo->prepare(
-                "SELECT nameActor, surnameActor, nameRole
+            $requeteCasting = $pdo->prepare("
+                SELECT nameActor, surnameActor, nameRole
                 FROM casting
                 INNER JOIN role ON casting.idRole = role.idRole
                 INNER JOIN actor ON casting.idActor = actor.idActor
@@ -88,7 +88,7 @@ namespace Controller;
         
             require "view/listRoles.php";
     }
-    public function detailACTOR($id) {
+    public function detailActor($id) {
 
         $pdo = Connect::seConnecter();
         $requeteActor = $pdo->prepare("
@@ -111,5 +111,17 @@ namespace Controller;
         
         require "view/detailActor.php";
 
-}
+    }
+    public function detailDirector($id) {
+        $pdo = Connect::seConnecter();
+        $requeteDirector = $pdo->prepare("
+        SELECT *
+        FROM director
+        WHERE idDirector = :id
+        ");
+
+        $requeteDirector->execute(["id" => $id]);
+        require "view/detailDirector.php";
+    }
+
 }

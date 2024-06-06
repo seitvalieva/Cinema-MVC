@@ -88,4 +88,18 @@ namespace Controller;
         
             require "view/listRoles.php";
     }
+    public function detailACTOR($id) {
+
+        $pdo = Connect::seConnecter();
+        $requeteActor = $pdo->prepare("
+        SELECT * 
+        FROM actor
+        WHERE idActor = :id
+        ");
+
+        $requeteActor->execute(["id" => $id]);
+        
+        require "view/detailActor.php";
+
+}
 }

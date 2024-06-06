@@ -97,7 +97,17 @@ namespace Controller;
         WHERE idActor = :id
         ");
 
+        $requeteFilmographie = $pdo->prepare("
+        SELECT nameActor, surnameActor, nameRole, titleFilm
+        FROM casting 
+        INNER JOIN actor ON casting.idActor = actor.idActor
+        INNER JOIN role ON casting.idRole = role.idRole
+        INNER JOIN film ON casting.idFilm = film.idFilm
+        WHERE casting.idActor = :id
+        ");
+
         $requeteActor->execute(["id" => $id]);
+        $requeteFilmographie->execute(["id" => $id]);
         
         require "view/detailActor.php";
 

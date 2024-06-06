@@ -22,8 +22,8 @@
     </tbody>
 </table>
 <?php 
-    $titre = "liste de role";
-    $titre_secondaire = "Liste des roles";
+    $titre = "list of roles";
+    $titre_secondaire = "List of roles";
 
     // On va donc "aspirer" tout ce qui se trouve entre 2 fonctions "ob_start()" et "ob_get_clean()" 
                 // (temporisation de sortie) 

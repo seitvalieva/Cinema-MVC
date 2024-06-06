@@ -41,7 +41,7 @@ foreach($requeteFilm->fetchAll() as $film) {
     </tbody>
 </table>
 
-<h2>Casting du film</h2>
+<h2>Casting of the film</h2>
 <?php
     foreach($castings as $cast) {
         echo $cast["nameActor"]." ".$cast["surnameActor"]." as ".$cast["nameRole"]."<br>";
@@ -49,8 +49,8 @@ foreach($requeteFilm->fetchAll() as $film) {
 ?>
 
 <?php 
-    $titre = "Detail de film";
-    $titre_secondaire = "Detail de film";
+    $titre = "Details of a film";
+    $titre_secondaire = "Details of a film";
 
     // On va donc "aspirer" tout ce qui se trouve entre 2 fonctions "ob_start()" et "ob_get_clean()" 
                 // (temporisation de sortie) 
